@@ -18,6 +18,11 @@
  * appear on THREE surfaces (checkout, booking, thank-you), which raises the
  * cost of getting them wrong rather than lowering it. Edit here, once.
  */
+/** What the funnel calls the call, in running copy. The checkout, the booking
+ *  page and the policies all say "Strategy Call"; the full product name is
+ *  LEGAL.product. */
+export const CALL_NAME = "Strategy Call";
+
 export const WHAT_THE_CALL_COVERS = [
   "A personalised assessment of your current physique, training and nutrition to identify exactly what’s holding back your progress",
   "A clear 90–120 day transformation roadmap to reduce body fat, build visible muscle and push your natural physique towards its peak",
