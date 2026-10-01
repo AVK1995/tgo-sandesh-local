@@ -2552,65 +2552,13 @@ br.sdp-br-lg{ display:inline; }
    dark-band colour flips are all inherited rather than restated. Only
    what the confirmation adds lives here.
    ===================================================================== */
-.eon-ty .ty-hero,
 .eon-ty .ty-close{ text-align:center; }
 
-/* The seal. Built like the guarantee card's icon tile rather than a tick
-   on its own: a confirmation is the one moment this funnel is allowed to
-   feel like an award. */
-/* `display:grid`, NOT inline-grid, and that is the whole fix for the pill.
-   The seal and the badge under it were both inline-level, so they sat side
-   by side on one line: a tick with "Booking confirmed" next to it rather
-   than above it. A block-level seal centred with `margin:auto` pushes the
-   badge onto its own line, where it belongs. */
-.eon-ty .ty-seal{
-  display:grid; place-items:center;
-  width:62px; height:62px; border-radius:50%;
-  background:rgba(var(--brand-rgb),.16);
-  border:1px solid rgba(var(--brand-rgb),.45);
-  color:var(--brand-bright);
-  margin:0 auto 16px;
-}
-.eon-ty .ty-seal svg{ width:30px; height:30px; }
-
-.eon-ty .ty-badge{
-  display:inline-flex; align-items:center;
-  padding:7px 15px; border-radius:999px;
-  border:1px solid rgba(var(--brand-rgb),.45);
-  background:rgba(var(--brand-rgb),.14);
-  font-family:var(--fb); font-size:10.5px; font-weight:700;
-  letter-spacing:.14em; text-transform:uppercase; line-height:1;
-  color:var(--brand-bright);
-}
-.eon-ty .ty-h1{
-  font-family:var(--fh);
-  font-size:clamp(28px,4.4vw,46px); line-height:1.12; letter-spacing:-.015em;
-  color:var(--ink-dark); margin:16px 0 0; text-wrap:balance;
-}
-.eon-ty .ty-h1 em{ font-style:normal; color:var(--brand-bright); }
 .eon-ty .ty-sub{
   max-width:56ch; margin:14px auto 0;
   font-size:15px; line-height:1.72; color:var(--ink-dark-soft);
 }
 .eon-ty .ty-sub a{ color:var(--brand-bright); }
-
-/* Two facts, not a list of features: what arrives, and when. */
-.eon-ty .ty-chips{
-  display:flex; flex-wrap:wrap; justify-content:center; gap:10px 14px;
-  margin:26px 0 0; padding:0; list-style:none;
-}
-.eon-ty .ty-chips li{
-  display:inline-flex; align-items:center; gap:9px;
-  padding:9px 16px; border-radius:999px;
-  border:1px solid var(--border-dark-strong);
-  font-family:var(--fb); font-size:12.5px; color:var(--ink-dark-soft);
-}
-.eon-ty .ty-tick{
-  display:grid; place-items:center;
-  width:16px; height:16px; flex:0 0 16px; border-radius:50%;
-  background:var(--brand); color:#fff;
-}
-.eon-ty .ty-tick svg{ width:9px; height:9px; }
 
 /* The three things the call covers, as display ordinals. Same treatment
    as the programme beat's pillar numbers on the landing page. */

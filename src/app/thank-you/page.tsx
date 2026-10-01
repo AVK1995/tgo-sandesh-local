@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 
+import ConfirmationStep from "@/components/ConfirmationStep";
 import SiteFooter from "@/components/SiteFooter";
 import { LEGAL } from "@/app/_legal/legal";
-import { WHAT_THE_CALL_COVERS } from "@/lib/call-copy";
+import { CALL_NAME, WHAT_THE_CALL_COVERS } from "@/lib/call-copy";
 
 export const metadata: Metadata = {
-  title: "You Are Booked · Extreme or Nothing",
-  description: "Your 1:1 Physique Transformation Strategy Call is confirmed.",
+  title: `WAIT! Confirm Your ${CALL_NAME} · ${LEGAL.brand}`,
+  description: `Your ${LEGAL.product} is not confirmed yet. Connect on WhatsApp for the next step.`,
   /* Never indexable, for the same reason as /book: it is a post-payment page
      and a search result for it would send strangers into a confirmation for a
      call they have not booked. */
@@ -86,23 +87,6 @@ const HAVE_READY: [string, string][] = [
   ],
 ];
 
-function Seal() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <circle cx="12" cy="12" r="9.2" />
-      <polyline points="7.6 12.4 10.6 15.4 16.4 8.8" />
-    </svg>
-  );
-}
-
-function Tick() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <polyline points="4 12.5 9.5 18 20 6.5" />
-    </svg>
-  );
-}
-
 export default async function Page({ searchParams }: { searchParams: SP }) {
   const sp = await searchParams;
   /* `booked=1` is set by the Cal handoff on /book. Its absence is NOT treated
@@ -113,37 +97,11 @@ export default async function Page({ searchParams }: { searchParams: SP }) {
 
   return (
     <div className="eon-book eon-ty">
-      {/* ── 1 · CONFIRMATION. Dark band, the page's first peak. ─────── */}
-      <section className="book-section book-dark ty-hero">
-        <div className="book-wrap book-narrow">
-          <span className="ty-seal" aria-hidden>
-            <Seal />
-          </span>
-          <span className="ty-badge">Booking confirmed</span>
-          <h1 className="ty-h1">
-            Your call is <em>locked in.</em>
-          </h1>
-          <p className="ty-sub">
-            Your slot is confirmed and the details are on their way to the email address you booked
-            with. Put it in your calendar now, while it is in front of you.
-          </p>
-
-          <ul className="ty-chips">
-            <li>
-              <span className="ty-tick" aria-hidden>
-                <Tick />
-              </span>
-              Confirmation by email, with your joining link
-            </li>
-            <li>
-              <span className="ty-tick" aria-hidden>
-                <Tick />
-              </span>
-              A reminder before the call
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* ── 1 · THE BRIDGE. Dark band, the page's first peak. Not yet
+             confirmed: the WhatsApp message is what confirms it. ──────── */}
+      <ConfirmationStep
+        avatar={{ src: "/sandesh-portrait.webp", alt: "Sandesh Soans", width: 950, height: 1689 }}
+      />
 
       {/* ── 2 · WHAT THE CALL IS. Light band, display ordinals. ─────── */}
       <section className="book-section book-light">
