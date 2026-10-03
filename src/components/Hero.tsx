@@ -55,7 +55,7 @@ export function Hero() {
     <section id="top" className="sdp-hero">
       <div className="sdp-wrap sdp-hero-inner">
         <GatePill>
-          FOR MEN 28–40 WHO ARE TIRED OF LOOKING AVERAGE DESPITE YEARS OF TRAINING
+          FOR MEN 28–40 WHO’VE NEVER TRAINED CONSISTENTLY &amp; NOW WANT SERIOUS RESULTS FAST
         </GatePill>
 
         <h1 className="sdp-h1" data-sdp-reveal style={revealDelay(".06s")}>

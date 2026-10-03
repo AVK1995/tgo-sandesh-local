@@ -2,7 +2,7 @@
 
 10+ Years of Coaching Experience | 1000+ Success Stories
 [Photos] ★★★★★ 5.0 Review | 100% Money-Back Guarantee
-FOR MEN 28–40 WHO ARE TIRED OF LOOKING AVERAGE DESPITE YEARS OF TRAINING
+FOR MEN 28–40 WHO’VE NEVER TRAINED CONSISTENTLY & NOW WANT SERIOUS RESULTS FAST
 
 Drop 8–10% Body Fat
 Build Visible Abs &
